@@ -3,13 +3,13 @@ require "lockup/engine"
 module Lockup
   extend ActiveSupport::Concern
 
-  included do
-    if self.respond_to?(:before_action)
-      before_action :check_for_lockup, except: ["unlock"]
-    else
-      before_filter :check_for_lockup, except: ["unlock"]
-    end
-  end
+  #included do
+  #  if self.respond_to?(:before_action)
+  #    before_action :check_for_lockup, except: ["unlock"]
+  #  else
+  #    before_filter :check_for_lockup, except: ["unlock"]
+  #  end
+  #end
 
   private
 
